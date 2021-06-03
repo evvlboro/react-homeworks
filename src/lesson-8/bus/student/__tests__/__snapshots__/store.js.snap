@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test store 1`] = `
+Object {
+  "student": Object {
+    "data": Object {
+      "age": "",
+      "email": "",
+      "firstName": "",
+      "sex": "",
+      "speciality": "",
+      "surname": "",
+    },
+  },
+}
+`;

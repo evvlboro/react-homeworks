@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User reducer should handle fill action: 
+      Object {
+        "data": Object {
+          "age": "19",
+          "email": "blablabla@gmail.com",
+          "firstName": "Уилл",
+          "sex": "male",
+          "speciality": "writer",
+          "surname": "Тернер",
+        }
+      }
+     1`] = `
+Object {
+  "data": Object {
+    "age": "19",
+    "email": "blablabla@gmail.com",
+    "firstName": "Уилл",
+    "sex": "male",
+    "speciality": "writer",
+    "surname": "Тернер",
+  },
+}
+`;
+
+exports[`User reducer should return initial state by default: 
+      Object {
+        "data": {
+          "age": "",
+          "email": "",
+          "firstName": "",
+          "sex": "",
+          "speciality": "",
+          "surname": "",
+        }
+     1`] = `
+Object {
+  "data": Object {
+    "age": "",
+    "email": "",
+    "firstName": "",
+    "sex": "",
+    "speciality": "",
+    "surname": "",
+  },
+}
+`;

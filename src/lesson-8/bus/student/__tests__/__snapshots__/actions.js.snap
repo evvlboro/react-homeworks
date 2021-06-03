@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User actions should fill student 1`] = `
+Object {
+  "payload": Object {
+    "age": "19",
+    "email": "blablabla@gmail.com",
+    "firstName": "Уилл",
+    "sex": "male",
+    "speciality": "writer",
+    "surname": "Тернер",
+  },
+  "type": "USER_FILL",
+}
+`;
