@@ -10,12 +10,10 @@ import { fetchForecast } from './api';
 
 // Hooks
 import { useUI } from '../ui';
-// import moment from 'moment';
 
 export const useForecastQuery = () => {
   const { setActiveDay } = useUI()
   const dispatch = useDispatch();
-
   const forecast = useSelector(({ forecast }) => forecast);
 
   const fetchForecastHandler = async () => {

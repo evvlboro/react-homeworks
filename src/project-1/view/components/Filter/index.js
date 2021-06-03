@@ -4,10 +4,10 @@ import React from 'react';
 // Redux
 import { useUI } from '../../../bus/ui'
 
-export const Filter = ({ forecast }) => {
+export const Filter = () => {
   const {
     ui: { filterState, isFilterActive },
-    setFilterState, setTogglerState, filterForecast, setActiveDay
+    setFilterState, setTogglerState, filterForecast
   } = useUI();
 
   const onChangeHandler = (fieldName) => (event) => {
@@ -20,9 +20,10 @@ export const Filter = ({ forecast }) => {
     return void setFilterState(fieldName, parsedValue);
   }
 
+  const onButtonClick = () => void filterForecast({ isReset: isFilterActive })
+
   const isButtonActive = Boolean(filterState.sunny || filterState.cloudy || filterState.minTemp || filterState.maxTemp);
 
-  console.log('Filter active day', forecast[0]);
   return (
     <section className="filter">
       <span
@@ -32,7 +33,7 @@ export const Filter = ({ forecast }) => {
       </span>
       <span
         onClick={() => !isFilterActive && void setTogglerState('sunny')}
-        className={`checkbox ${filterState.sunny ? 'selected' : ''}`}>
+        className={`checkbox${filterState.sunny ? ' selected' : ''}`}>
         Солнечно
       </span>
       <p className="custom-input">
@@ -57,10 +58,7 @@ export const Filter = ({ forecast }) => {
       </p>
       <button
         disabled={!isButtonActive}
-        onClick={() => {
-          filterForecast({ isReset: isFilterActive });
-          setActiveDay(forecast[0]?.day);
-        }}>
+        onClick={onButtonClick}>
         {isFilterActive ? 'Сбросить' : 'Отфильтровать'}
       </button>
     </section>
